@@ -7,12 +7,12 @@ public class luchador_DiegoVega {
  private int def;
  private int spd;
  private int estrellas;
- private String atributo;
- public String getAtributo() {
-	 return this.atributo;
+ private String faccion;
+ public String getFaccion() {
+	 return this.faccion;
 	 
  }
- public int getStrellas() {
+ public int getEstrellas() {
 	 return this.estrellas;
  }
  public String getNombre() {
@@ -30,8 +30,8 @@ public int getDef() {
 public int getSpd() {
 	return this.spd;
 }
-public void setAtributo(String atributo) {
-	this.atributo=atributo;
+public void setFaccion(String faccion) {
+	this.faccion=faccion;
 }
 public void setEstrellas(int estrellas) {
 	this.estrellas=estrellas;
@@ -58,7 +58,7 @@ public luchador_DiegoVega() {
 	this.hp=valorHp(estrellas);
 	this.def=valorDef(estrellas);
 	this.spd=valorSpd(estrellas);
-	this.atributo=atributo();
+	this.faccion=faccion();
 }	
 
 public static int estrellas() {
@@ -95,15 +95,27 @@ public static String nombres() {
 	name=nombres[rnd.nextInt(nombres.length)];
 	return name;
 }
-public static String atributo() {
+public static String faccion() {
 	Random rnd=new Random();
-	String atributo;
+	String faccion;
 	String[] elementos= {"Fuego","Agua","Tierra"};
-	atributo= elementos[rnd.nextInt(elementos.length)];
-	return atributo;
+	faccion= elementos[rnd.nextInt(elementos.length)];
+	return faccion;
 	
+}
+public void mostrar() {
+	System.out.println("el nombre es "+ getNombre());
+	System.out.println("el ataque es "+ getAtk());
+	System.out.println("la defensa es "+ getDef());
+	System.out.println("el velocidad es "+ getSpd());
+	System.out.println("la vida es "+ getHp());
+	System.out.println("el rango es "+ getEstrellas());
+	System.out.println("el nombre es "+ getNombre());
+	System.out.println("su faccion es "+ getFaccion());
 }
 
 }
+
+
 
 
